@@ -862,8 +862,7 @@ public class SettingsActivity extends SettingsDrawerActivity
 
         // Root management
         setTileEnabled(new ComponentName(packageName,
-                        Settings.RootManagementActivity.class.getName()),
-                isRootAvailable(), isAdmin);
+                        Settings.GesturesSettingsActivity.class.getName()), true, isAdmin);
 
         if (UserHandle.MU_ENABLED && !isAdmin) {
 

@@ -33,6 +33,7 @@ import com.android.settings.accessibility.AccessibilitySettings;
 import com.android.settings.accessibility.AccessibilityShortcutPreferenceFragment;
 import com.android.settings.accessibility.MagnificationPreferenceFragment;
 import com.android.settings.accounts.UserAndAccountDashboardFragment;
+import com.android.settings.screwd.dashboard.GesturesSettings;
 import com.android.settings.applications.AppAndNotificationDashboardFragment;
 import com.android.settings.applications.DefaultAppSettings;
 import com.android.settings.applications.SpecialAccessSettings;
@@ -216,6 +217,11 @@ public final class SearchIndexableResources {
                 AutomaticStorageManagerSettings.class,
                 NO_DATA_RES_ID,
                 R.drawable.ic_settings_storage);
+<<<<<<< HEAD
+=======
+        addIndex(ButtonSettings.class, NO_DATA_RES_ID, R.drawable.ic_buttons);
+        addIndex(GesturesSettings.class, NO_DATA_RES_ID, R.drawable.ic_settings_gestures);
+>>>>>>> e38028e... Implement Fingerprint Gestures
     }
 
     private SearchIndexableResources() {
