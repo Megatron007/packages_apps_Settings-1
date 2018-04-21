@@ -56,6 +56,7 @@ public class GesturesSettings extends DashboardFragment implements
 
     // Off-screen Gestures
     private static final String KEY_FINGERPRINT_GESTURES = "fingerprint_gestures";
+    private static final String KEY_SINGLE_TAP           = "single_tap";
     private static final String KEY_DOUBLE_TAP           = "double_tap";
     private static final String KEY_LONG_PRESS           = "long_press";
     private static final String KEY_SWIPE_UP             = "swipe_up";
@@ -68,6 +69,7 @@ public class GesturesSettings extends DashboardFragment implements
     private static final HashMap<String, String> mFPGestureSettings = new HashMap();
 
     static {
+        mFPGestureKeyCodes.put(KEY_SINGLE_TAP, com.android.internal.R.integer.config_fpSingleTapKeyCode);
         mFPGestureKeyCodes.put(KEY_DOUBLE_TAP, com.android.internal.R.integer.config_fpDoubleTapKeyCode);
         mFPGestureKeyCodes.put(KEY_LONG_PRESS, com.android.internal.R.integer.config_fpLongpressKeyCode);
         mFPGestureKeyCodes.put(KEY_SWIPE_UP, com.android.internal.R.integer.config_fpSwipeUpKeyCode);
@@ -77,6 +79,7 @@ public class GesturesSettings extends DashboardFragment implements
     }
 
     static {
+        mFPGestureDefaults.put(KEY_SINGLE_TAP, com.android.internal.R.integer.config_fpSingleTapDefault);
         mFPGestureDefaults.put(KEY_DOUBLE_TAP, com.android.internal.R.integer.config_fpDoubleTapDefault);
         mFPGestureDefaults.put(KEY_LONG_PRESS, com.android.internal.R.integer.config_fpLongpressDefault);
         mFPGestureDefaults.put(KEY_SWIPE_UP, com.android.internal.R.integer.config_fpSwipeUpDefault);
@@ -86,6 +89,7 @@ public class GesturesSettings extends DashboardFragment implements
     }
 
     static {
+        mFPGestureSettings.put(KEY_SINGLE_TAP, Settings.System.FINGERPRINT_GESTURES_SINGLE_TAP);
         mFPGestureSettings.put(KEY_DOUBLE_TAP, Settings.System.FINGERPRINT_GESTURES_DOUBLE_TAP);
         mFPGestureSettings.put(KEY_LONG_PRESS, Settings.System.FINGERPRINT_GESTURES_LONGPRESS);
         mFPGestureSettings.put(KEY_SWIPE_UP, Settings.System.FINGERPRINT_GESTURES_SWIPE_UP);
